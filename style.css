@@ -1,0 +1,43 @@
+/* Reset básico para evitar espaços indesejados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* O contêiner principal da Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Joga a logo para a esquerda e os links para a direita */
+  align-items: center;            /* Alinha os itens verticalmente ao centro */
+  background-color: #1a1a1a;
+  padding: 15px 40px;
+}
+
+/* Estilo da Logo */
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* O contêiner dos links */
+.nav-links {
+  display: flex;      /* Coloca os itens da lista lado a lado */
+  gap: 30px;          /* Define o espaço entre os links */
+  list-style: none;   /* Remove os marcadores (bolinhas) da lista */
+}
+
+/* Estilo dos Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;     /* Cor de destaque ao passar o mouse */
+}
