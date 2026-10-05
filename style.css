@@ -1,43 +1,75 @@
-/* Reset básico para evitar espaços indesejados */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* O contêiner principal da Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Joga a logo para a esquerda e os links para a direita */
-  align-items: center;            /* Alinha os itens verticalmente ao centro */
-  background-color: #1a1a1a;
-  padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 15px 30px;
 }
 
-/* Estilo da Logo */
-.logo a {
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* O contêiner dos links */
 .nav-links {
-  display: flex;      /* Coloca os itens da lista lado a lado */
-  gap: 30px;          /* Define o espaço entre os links */
-  list-style: none;   /* Remove os marcadores (bolinhas) da lista */
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
 }
 
-/* Estilo dos Links */
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+/* Estilo do link da logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo dos outros links */
+.nav-links a:not(.logo) {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .nav-links a:hover {
-  color: #00bcd4;     /* Cor de destaque ao passar o mouse */
+    color: #00bcd4;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* box de cores */
+.cores {
+    width: 100%;
+
+    .azul {
+        height: 40vh;
+        background-color: #00bcd4;
+    }
+
+    .vermelho {
+        height: 30vh;
+        background-color: #d40035;
+    }
+
+    .amarelo {
+        height: 40vh;
+        background-color: #c0d315;
+    }
+
+    .roxo {
+        height: 34vh;
+        background-color: #64189b;
+    }
 }
