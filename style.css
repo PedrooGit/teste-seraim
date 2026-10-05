@@ -1,3 +1,10 @@
+/* vars */
+:root {
+    --preto: #171212;
+    --font-mid: "Berkshire Swash", serif;
+}
+
+/* config geral */
 * {
     margin: 0;
     padding: 0;
@@ -5,36 +12,65 @@
     font-family: Arial, sans-serif;
 }
 
+/* fundo da imagem do passaro */
+.fundo {
+    position: relative;
+    background-image: url('img/passaro.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+/* flex-pai, onde vai ficar aa barra de navegação */
 .navbar {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1a1a1a;
-    padding: 15px 30px;
+    left: 50%;
+    /* Centraliza a navbar na horizontal */
+    transform: translateX(-50%);
+
+    margin-top: 20px;
+    margin-left: auto;
+    /* Centraliza a navbar na tela */
+    margin-right: auto;
+    width: 46%;
+    height: 10vh;
+
+    border-radius: 50px 50px 50px 50px;
+    /* Borda estilizada */
+    background: var(--preto);
+    background: -moz-linear-gradient(left, #E9FCF0 0%, #ECFFF0 50%, #F1FFF2 100%);
+    background: -webkit-linear-gradient(left, #E9FCF0 0%, #ECFFF0 50%, #F1FFF2 100%);
+    background: linear-gradient(to right, #E9FCF0 0%, #ECFFF0 50%, #F1FFF2 100%);
 }
 
+/* onde fica os links todos */
 .nav-links {
     display: flex;
     align-items: center;
     gap: 25px;
     list-style: none;
+
 }
 
-/* Estilo do link da logo */
+/* onde fica a só logo */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+    position: absolute;
+    left: 6vb;
+    /* Distância da borda esquerda da navbar */
 }
 
-/* Estilo dos outros links */
+/* onde fica a só links */
 .nav-links a:not(.logo) {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 16px;
+    font-family: var(--font-mid);
 }
 
+/* quando fica em cima dos links geral */
 .nav-links a:hover {
     color: #00bcd4;
 }
@@ -49,18 +85,18 @@
 
 
 
-/* box de cores */
 .cores {
     width: 100%;
 
     .azul {
         height: 40vh;
-        background-color: #00bcd4;
+        background-color: #15d3bd;
     }
 
     .vermelho {
         height: 30vh;
         background-color: #d40035;
+        z-index: 99;
     }
 
     .amarelo {
@@ -72,4 +108,120 @@
         height: 34vh;
         background-color: #64189b;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* geral do fim da pagina */
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  padding-top: 50px;
+  margin-top: auto;
+
+  /* container principal das 3 colunas */
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  /* estilo geral para as 3 colunas */
+  .footer-col {
+    flex: 1;
+
+    h4 {
+      color: #ffffff;
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: #9ca3af;
+          text-decoration: none;
+          font-size: 14px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  /* 📍 Coluna Esquerda: Logo & Sobre */
+  .col-left {
+    text-align: left;
+    
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  }
+
+  /* 📍 Coluna Centro: Contato no meio, textos alinhados à esquerda entre si */
+  .col-center {
+    display: flex;
+    justify-content:space-evenly;
+
+
+    .center-wrapper {
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+  /* 📍 Coluna Direita: Navegação encostada na direita, com textos alinhados à esquerda */
+  .col-right {
+    display: flex;
+    justify-content:space-evenly;
+
+    .right-wrapper {
+      width: fit-content;
+      text-align: left;
+    }
+  }
+
+  /* Faixa inferior de Copyright */
+  .footer-bottom {
+    border-top: 1px solid #1f2937;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #6b7280;
+  }
 }
